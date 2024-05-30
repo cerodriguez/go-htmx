@@ -1,0 +1,9 @@
+<ul>
+    {{range $id, $item := .}}
+    <li>
+        {{$item}} 
+        <button hx-get="/update?id={{$id}}" hx-target="#form" hx-swap="innerHTML">Edit</button>
+        <button hx-get="/delete?id={{$id}}" hx-target="#item-list" hx-swap="innerHTML">Delete</button>
+    </li>
+    {{end}}
+</ul>

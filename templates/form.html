@@ -1,0 +1,5 @@
+<form hx-post="{{.Action}}" hx-target="#item-list" hx-swap="innerHTML">
+    <input type="hidden" name="id" value="{{.ID}}">
+    <input type="text" name="item" value="{{.Item}}">
+    <button type="submit">Save</button>
+</form>

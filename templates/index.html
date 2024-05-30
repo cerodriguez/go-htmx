@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX CRUD Demo</title>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+</head>
+<body>
+    <h1>HTMX CRUD Demo</h1>
+    <div>
+        <button hx-get="/create" hx-target="#form" hx-swap="innerHTML">Add Item</button>
+    </div>
+    <div id="form"></div>
+    <div id="item-list" hx-get="/" hx-trigger="load" hx-swap="innerHTML">
+        Loading...
+    </div>
+</body>
+</html>
